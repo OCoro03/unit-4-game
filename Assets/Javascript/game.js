@@ -10,6 +10,7 @@ var randomBlue= 0;
 
 // window.onload = function(){
 
+// window.onload = function(){
 // $("#orange").on("click", Math.floor((Math.random() * 12) + 1));
 // $("#saphire").on("click", run);
 // $("#teal").on("click", run);
