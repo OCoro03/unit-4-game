@@ -5,19 +5,25 @@ var randomOrange = 0;
 var randomSaphire = 0;
 var randomTeal= 0;
 var randomBlue= 0;
-var userScore;
+var userScore ;
 var crystalsPoints = 0;
 var compChoice;
 
 // Created my reset function
-// function resetAll() {
-//     compChoice();
-//     random();
+function compChoice() {
+    // resetAll();
+    // random();
 //     crystalsPoints = 0;
 
 //     $("#totalNumber").text(crystalsPoints);
 //     $("#randomNumber").text(compChoice);
 // }
+}
+function resetAll(){
+    random();
+    // userScore();
+    // crystalsPoints();
+}
 
 // Created a random number generator for numbers between 19-120 
 function random(){
@@ -95,12 +101,15 @@ $("#blue").on("click", function(){
 
 var checkScore = function(){
     if (crystalsPoints === compChoice){
-        resetAll();
+        alert("You Win!") 
         userWins++;
-        $("#win").text(userWins);
-    } else if (crystalsPoints > compChoice){
         resetAll();
+        $("#win").text("Wins: " + userWins);
+
+    } else if (crystalsPoints > compChoice){
+        alert("You Lose! Better Luck Next Time")
         userLoses++;
-        $("#lose").text(userLoses);
-    }resetAll();
+        resetAll();
+        $("#lose").text("Loses: " + userLoses);
+    }
 } 
